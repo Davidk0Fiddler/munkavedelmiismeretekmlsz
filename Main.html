@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Munkavédelmi ismeretek</title>
     <style>
-         body{
+        *{
+            box-sizing: border-box;
+        }
+        body{
             background-image: url("https://www.dco.hu/images/kepek/Depositphotos_30816539.jpg");
         }
         .label{
@@ -17,8 +20,9 @@
            
         }
 
-        .categories{
-            display: flex;
+        #categories{
+            width: 100%;
+ 
 
         }
 
@@ -61,49 +65,30 @@
         a:hover{
             cursor: pointer;
         }
-                @media (max-width:  1280px){
-            .elsotema{
-            margin-left: 15px;
-            margin-right: 15px;
-   
+        .col-1{
+            width: 25%;
         }
-        .masodiktema{
-            margin-left: 15px;
-            margin-right: 15px;
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }[class*="col-"] {
+        float: left;
+        padding: 15px;
+ 
         }
-        .harmadiktema{
-            margin-left: 15px;
-            margin-right:15px;
-        }
-        .negyediktema{
-            margin-left: 15px;
-            margin-right: 15px;
-   
-        }
-        #ikon{
-            height: 400px;
-            width: 200px;
-        }
-        #cim{
-            height: 50px;
-            width: 200px;
-        }
-        .label{
-            align-items: center;
-        }
-}
     </style>
 </head>
 <body>
     
-    <div class="label">
+    <div class="label" >
         <h1> <table align="center"><tr><td align="center"><font type="Times-new-roman"  size="50px"><u>Munkavédelem</u></font> </h1></td></tr> </table>
     </div>
 
-    <div class="categories">
-
-       <a href="Munkavédelem.html"><div class="elsotema">
-            <table class="elsotematablazat">
+    <div  class="row">
+        <div class="col-1">
+       <a href="Munkavédelem.html"><div id="elsotema" >
+            <table class="elsotematablazat" align="center">
                 <tr>
                     <td collspan="2" id="ikon" background="Paragrafus jel.jpg">
                     &nbsp;
@@ -114,7 +99,7 @@
 
             <br>
             
-            <table class="elsotemacim"id="cim">
+            <table class="elsotemacim"id="cim" align="center">
                 <tr>
                     <td align="center">
                         Munkavédelem
@@ -123,9 +108,10 @@
             </table>
         </div>
     </a>
-
-      <a href="Biztonsági és egészségvédelmi jelek, jelzések.html" > <div class="masodiktema">
-            <table class="elsotematablazat">
+        </div>
+        <div class="col-1">
+      <a href="Biztonsági és egészségvédelmi jelek, jelzések.html" > <div id="masodiktema" >
+            <table class="elsotematablazat" align="center">
                 <tr>
                     <td collspan="2" id="ikon" background="Táblázat.jpg">
                         
@@ -137,17 +123,17 @@
 
             <br>
             
-            <table class="elsotemacim"id="cim">
+            <table class="elsotemacim"id="cim" align="center">
                 <tr>
                     <td align="center">
                         Biztonsági és egészségvédelmi jelek, jelzések
                     </td>
                 </tr>
             </table>
-        </div></a>
-
-        <a href="Foglalkozási ártalmak és megbetegesédek.html"><div class="harmadiktema">
-            <table class="elsotematablazat">
+        </div></a> </div>
+        <div class="col-1">
+        <a href="Foglalkozási ártalmak és megbetegesédek.html"><div id="harmadiktema" >
+            <table class="elsotematablazat" align="center">
                 <tr>
                     <td collspan="2" id="ikon" background="Mérgező jel.jpg">
                         
@@ -159,19 +145,19 @@
 
             <br>
             
-            <table class="elsotemacim"id="cim">
+            <table class="elsotemacim"id="cim" align="center">
                 <tr>
                     <td align="center">
                         Foglalkozási ártalmak és megbetegesédek
                     </td>
                 </tr>
             </table>
-        </div> </a>
-
-        <a href="Anyagmozgatás.html"><div class="negyediktema">
-            <table class="elsotematablazat">
+        </div> </a> </div>
+        <div class="col-1">
+        <a href="Anyagmozgatás.html"><div id="negyediktema">
+            <table class="elsotematablazat" align="center">
                 <tr>
-                    <td collspan="2" id="ikon" background="anyagmozgatás.jpg" >
+                    <td collspan="2" id="ikon" background="anyagmozgatás.jpg"  >
 
 
                     </td>
@@ -180,14 +166,14 @@
 
             <br>
             
-            <table class="elsotemacim"id="cim">
+            <table class="elsotemacim"id="cim" align="center">
                 <tr>
                     <td align="center">
                         Anyagmozgatás
                     </td>
                 </tr>
             </table>
-        </div></a>
+        </div></a> </div>
 
     </div>
 
