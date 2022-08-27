@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anyagmozgatás</title>
     <style>
+                *{
+            box-sizing: border-box;
+        }
          body{
             background-image: url("https://www.dco.hu/images/kepek/Depositphotos_30816539.jpg");
         }
@@ -18,9 +21,8 @@
            
         }
 
-        .categories{
-            display: flex;
-
+        #categories{
+            width: 100%;
         }
 
         .elsotema{
@@ -62,37 +64,18 @@
         a:hover{
             cursor: pointer;
         }
-                 @media (max-width:  1280px){
-            .elsotema{
-            margin-left: 15px;
-            margin-right: 15px;
-   
+ .col-1{
+            width: 25%;
         }
-        .masodiktema{
-            margin-left: 15px;
-            margin-right: 15px;
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }[class*="col-"] {
+        float: left;
+        padding: 15px;
+ 
         }
-        .harmadiktema{
-            margin-left: 15px;
-            margin-right:15px;
-        }
-        .negyediktema{
-            margin-left: 15px;
-            margin-right: 15px;
-   
-        }
-        #ikon{
-            height: 400px;
-            width: 200px;
-        }
-        #cim{
-            height: 50px;
-            width: 200px;
-        }
-        .label{
-            align-items: center;
-        }
-}
     </style>
 </head>
 <body>
@@ -101,8 +84,8 @@
         <h1> <table align="center"><tr><td align="center"><font type="Times-new-roman"  size="50px"><u>Anyagmozgatás</u> </h1></td></tr> </table>
     </div>
 
-    <div class="categories">
-
+    <div class="row">
+        <div class="col-1">
        <a href="Anyagmozgatás.pdf"><div class="elsotema">
             <table class="elsotematablazat">
                 <tr>
@@ -124,7 +107,8 @@
             </table>
         </div>
     </a>
-
+         </div>
+        <div class="col-1">
       <a href="Anyagmozgatásword.pdf"> <div class="masodiktema">
             <table class="elsotematablazat">
                 <tr>
@@ -145,8 +129,8 @@
                     </td>
                 </tr>
             </table>
-        </div></a>
-
+          </div></a> </div>
+        <div class="col-1">
         <a href="https://www.youtube.com/watch?v=iv_9-3bGxNE"><div class="harmadiktema">
             <table class="elsotematablazat">
                 <tr>
@@ -169,8 +153,8 @@
                     </td>
                 </tr>
             </table>
-        </div> </a>
-
+        </div> </a></div>
+           <div class="col-1">
         <a href="Anyagmozgatásfeladatok.html"><div class="negyediktema">
             <table class="elsotematablazat">
                 <tr>
@@ -190,7 +174,7 @@
                     </td>
                 </tr>
             </table>
-        </div></a>
+        </div></a></div>
 
     </div>
 
