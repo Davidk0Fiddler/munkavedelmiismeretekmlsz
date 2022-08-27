@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Munkavédelem</title>
     <style>
+                      *{
+            box-sizing: border-box;
+        }
          body{
             background-image: url("https://www.dco.hu/images/kepek/Depositphotos_30816539.jpg");
         }
@@ -18,9 +21,8 @@
            
         }
 
-        .categories{
-            display: flex;
-
+          #categories{
+            width: 100%;
         }
 
         .elsotema{
@@ -62,37 +64,18 @@
         a:hover{
             cursor: pointer;
         }
-            @media (max-width:  1280px){
-            .elsotema{
-            margin-left: 60px;
-            margin-right:60px;
-   
+        .col-1{
+            width: 25%;
         }
-        .masodiktema{
-            margin-left: 60px;
-            margin-right: 60px;
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }[class*="col-"] {
+        float: left;
+        padding: 15px;
+ 
         }
-        .harmadiktema{
-            margin-left:60px;
-            margin-right:60px;
-        }
-        .negyediktema{
-            margin-left: 60px;
-            margin-right: 60px;
-   
-        }
-        #ikon{
-            height: 400px;
-            width: 200px;
-        }
-        #cim{
-            height: 50px;
-            width: 200px;
-        }
-        .label{
-            align-items: center;
-        }
-}
     </style>
 </head>
 <body>
@@ -101,8 +84,8 @@
         <h1> <table align="center"><tr><td align="center"><font type="Times-new-roman"  size="50px"><u>Munkavédelem</u></font> </h1></td></tr> </table>
     </div>
 
-    <div class="categories">
-
+    <div class="row">
+        <div class="col-1">
        <a href="Védekezési lehetőségek a veszélyek ellen a munkavédelem.pdf"><div class="elsotema">
             <table class="elsotematablazat">
                 <tr>
@@ -123,8 +106,8 @@
                 </tr>
             </table>
         </div>
-    </a>
-
+    </a> </div>
+        <div class="col-1">
       <a href="Védekezési lehetőségek a veszélyek ellen a munkavédelemword.pdf"> <div class="masodiktema">
             <table class="elsotematablazat">
                 <tr>
@@ -145,8 +128,8 @@
                     </td>
                 </tr>
             </table>
-        </div></a>
-
+        </div></a> </div>
+            <div class="col-1">
         <a><div class="harmadiktema">
             <table class="elsotematablazat">
                 <tr>
@@ -170,8 +153,8 @@
                     </td>
                 </tr>
             </table>
-        </div> </a>
-
+        </div> </a> </div>
+            <div class="col-1">
         <a href="Munkavédelemfeladatok.html"><div class="negyediktema">
             <table class="elsotematablazat">
                 <tr>
@@ -191,7 +174,7 @@
                     </td>
                 </tr>
             </table>
-        </div></a>
+        </div></a></div>
 
     </div>
 
